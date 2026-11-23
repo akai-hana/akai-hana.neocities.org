@@ -1,9 +1,60 @@
-/* CSS is how you can add style to your website, such as colors, fonts, and positioning of your
-   HTML content. To learn how to do something, just try searching Google for questions like
-   "how to change link color." */
+@import url('https://fonts.googleapis.com/css2?family=Press+Start+2P&display=swap');
+
+:root {
+  --pri: #ac3232;
+  --sec: #52263e;
+  --alt: #007373;
+
+  --bg: #0d0d14;
+  --bg-box: #13131d;
+}
+
+* {
+}
 
 body {
-  background-color: white;
-  color: black;
-  font-family: Verdana;
+  font-family: 'Courier New';
+  color: var(--pri);
+  background: var(--bg);
+}
+
+p {
+  font-size: 100%;
+}
+
+h1, h2 {
+  font-family: 'Press Start 2P';
+
+  font-smooth: never;
+  -webkit-font-smoothing: none;
+}
+
+h3 {
+  font-size: 15px;
+  font-style: italic;
+  /* font-weight: bold; */
+}
+
+ul {
+  color: var(--alt);
+}
+
+hr {
+  border: 0;
+  border-top: 4px solid var(--pri);
+}
+
+.header {
+  border: 4px solid var(--pri);
+}
+
+.box {
+  background: var(--bg-box);
+  padding: 24px 48px;
+  padding-top: 12px;
+  padding-bottom: 12px;
+
+  margin: auto;
+  max-width: 50%;
+  font-size: 75%;
 }
