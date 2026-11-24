@@ -11,55 +11,104 @@
     <!-- FAVICON -->
     <link rel="icon" href="favicon.svg" type="image/svg+xml">
   </head>
+
   <body>
+    <div class="layout">
 
-    <!-- INTRO -->
-    <div class="header box">
-      <h3>Welcome! You can call me</h3>
-
-      <div align=center>
-        <h1>akai_hana</h1>
+      <!-- HEADER -->
+      <div class="header box">
+        <h3 style="color: var(--sec)">Welcome! You can call me</h3>
+        <h1>&gt; akai_hana&nbsp;&nbsp;</h1>
       </div>
-    </div>
 
-    <br>
+      <div class="row">
 
-    <!-- BODY -->
-    <div class="box">
-      <p>Hello everyone! Welcome to my Neocity!</p>
+        <!-- SIDEBAR (left) -->
+        <nav class="box side-left">
+          <h2 style="color: var(--sec)">Tabs</h2>
 
-      <p>I want this site to be a place where I gather various writings, like a dream diary, blog, articles about various topics i'm interested in, and some other stuff.</p>
+          <hr style="color: var(--pri)">
 
-      <p>This is my first ever time doing a website, so i'm still a bit lost. However, i'm feeling pretty excited about this, so i have hopes that i'll enjoy this through, and end up making something i feel happy about.</p>
+          <p style="color: var(--sec)"><i>(not yet working)</i></p>
 
-      <hr>
+          <div class="tabs" style="text-align: center">
+            <h3 style="color: var(--pri)">Home</h3>
+            <h3>Dream logs</h3>
+            <h3>Diary</h3>
+            <h3>Blog</h3>
 
-      <p>This website is currently 1 day and a half old! (2026-11-22, 23 at the time i'm writing this). I've just finished configuring everything, and doing github repo pipeline machinery, but other than that, there's not much of anything here yet.</p>
+            <!--
+              TODO: once i do multiple tab pages;
+              - pri on current tab,
+              - alt on other tabs,
+              - sec on hovering any tab.
+            -->
+          </div>
+        </nav>
 
-      <p>So, come again later!</p>
+        <!-- MAIN -->
+        <div class="box main">
+          <h3><u>Hello everyone!<br>Welcome to my Neocity!</u></h3>
 
-      <div style="color: var(--sec); line-height: 0;">
-        <br>
+          <p>I want this site to be a place where I gather various writings, like a dream diary, blog, articles about various topics i'm interested in, and some other stuff.</p>
 
-        <p><em>Love,</em></p>
-        <p><b><em>> akai_hana</em></b></p>
+          <p>This is my first ever time doing a website, so i'm still a bit lost. However, i'm feeling pretty excited about this, so i have hopes that i'll enjoy this through, and end up making something i feel happy about.</p>
+
+          <hr>
+
+          <p>This website is currently 1 day and a half old! <i>(2026-11-22, 23 at the time i'm writing this)</i>. I've just finished configuring everything, and doing github repo pipeline machinery, but other than that, there's not much of anything here yet.</p>
+
+          <p>So, come again later!</p>
+
+          <div style="color: var(--sec); line-height: 0">
+            <br>
+
+            <h3><em>Love,</em></h3>
+            <h3><em>> akai_hana</em></h3>
+          </div>
+        </div>
+
+        <!-- SIDEBAR (right) -->
+        <div class="box side-right">
+          <h2 style="color: var(--sec)">Ideas</h2>
+
+          <hr>
+
+          <div style="color: var(--sec); margin: 0 0 0.5em; }">
+            <h3>-Dream journal</h3>
+            <h3>-Diary</h3>
+            <h3>-Blog tab</h3>
+            <h3>-Sidebars (left tabs, right links)</h3>
+            <h3>-Some sortof commenting system?</h3>
+            <h3>-Linux tab</h3>
+            <h3>-Photo corner?</h3>
+          </div>
+        </div>
       </div>
-    </div>
 
-    <br>
+      <!-- FOOTER -->
+      <div class="footer box">
+        <h2 style="text-align: center; color: var(--sec)"; text-align: left><u>Contact me!</u></h2>
 
-    <!-- BOTTOM -->
-    <div class="box">
-      <h3><u>Idea board:</u></h3>
-      <ul style="font-weight: bold;">
-        <li>Dream journal</li>
-        <li>Diary</li>
-        <li>Blog tab</li>
-        <li>Sidebars (left tabs, right links)</li>
-        <li>Some sort of commenting system?</li>
-        <li>Linux tab</li>
-        <li>photo corner?</li>
-      </ul>
+        <div style="display: grid; grid-template-columns: repeat(3, 1fr); text-align: center;">
+
+          <div>
+            <h3><a href="https://discord.com/users/457182030514356226">Discord</a></h3>
+            <h4>akai_hana</h4>
+          </div>
+
+          <div>
+            <h3><a href="https://github.com/akai-hana">GitHub</a></h3>
+            <h4>github.com/akai-hana</h4>
+          </div>
+
+          <div>
+            <h3><a href="https://pastebin.com/FSE6sJq4">PGP public key</a></h3>
+            <h4>Fingerprint: DF2B30FB5C97CCB0D96CC1BD18B15131709BC9A4</h4>
+          </div>
+
+        </div>
+      </div>
     </div>
   </body>
 </html>
