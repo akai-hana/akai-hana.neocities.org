@@ -5,40 +5,32 @@
   --sec: #52263e;
   --alt: #007373;
 
-  --thicc: 4px;
-
   --bg: #0d0d14;
   --bg-box: #13131d;
+
+  --thicc: 4px;
 }
+
 
 * {
   box-sizing: border-box;
 }
 
 body {
-  font-family: 'Courier New';
+  font-family: 'Courier New', monospace;
   color: var(--pri);
   background: var(--bg);
+}
+
+h1 {
+  font-family: 'Press Start 2P', monospace;
+  -webkit-font-smoothing: none;
+  font-size: clamp(1.25rem, 6vw, 2rem);
 }
 
 p {
   font-size: 133%;
   margin: 0 0 1.5em;
-}
-
-h1, h2, h3 {
-  font-family: 'Press Start 2P';
-
-  font-smooth: never;
-  -webkit-font-smoothing: none;
-}
-
-h1 {
-  font-size: clamp(1.25rem, 6vw, 2rem);
-}
-
-ul {
-  color: var(--alt);
 }
 
 hr {
@@ -47,33 +39,44 @@ hr {
   margin: 1.5em 0;
 }
 
+a {
+  color: var(--alt);
+}
+
+/* Wrap links and tabs in < > */
+/* TODO: make some sort of "clickable" class? */
+a::before, .tab::before { content: "<"; }
+a::after,  .tab::after  { content: ">"; }
+
+.pixel-lg, .pixel-sm {
+  font-family: 'Press Start 2P', monospace;
+  -webkit-font-smoothing: none;
+  font-weight: bold;
+}
+
+.pixel-lg {
+  font-size: 1.5em;
+  margin: 0.83em 0;
+}
+
+.pixel-sm {
+  font-size: 1.17em;
+  margin: 1em 0;
+}
+
+.label {
+  font-size: 1em;
+  font-weight: bold;
+  margin: 1.33em 0;
+}
+
+/* HOLY GRAIL LAYOUT */
+
+/* Base */
+
 .layout {
   max-width: 995px;
   margin: 0 auto;
-}
-
-.box {
-  background: var(--bg-box);
-  padding: 12px 48px;
-
-  font-size: 75%;
-  min-width: 0;
-}
-
-.header {
-  border: var(--thicc) solid var(--pri);
-}
-
-.main {
-  border: var(--thicc) solid var(--sec);
-}
-
-.footer {
-  border: var(--thicc) solid var(--alt);
-}
-
-.header h1, .footer h3 {
-  text-align: center;
 }
 
 .row {
@@ -82,31 +85,50 @@ hr {
   margin: 16px 0;
 }
 
-.side-left, .side-right {
+.box {
+  background: var(--bg-box);
+  padding: 12px 48px;
+  font-size: 75%;
+  min-width: 0;
+}
+
+/* Header */
+
+.header {
+  border: var(--thicc) solid var(--pri);
+}
+
+.header h1,
+.header p {
+  text-align: center;
+}
+
+.header p {
+  color: var(--sec);
+}
+
+/* Sidebars */
+
+.sidebar {
+  flex: 0 0 209px;
   display: flex;
   flex-direction: column;
-}
-
-/* explicit, identical spacing so both sidebars line up */
-.side-left h2, .side-right h2 {
-  margin: 0.5em 0 1em;
-}
-
-.side-left hr, .side-right hr {
-  margin: 0 0 1.5em;
-}
-
-.side-left {
-  flex: 0 0 209px;
   padding-left: 16px;
   padding-right: 16px;
 }
 
-ul {
-  padding-left: 0;
-  list-style-position: inside;
-  list-style: none;
-  text-align: center;
+.sidebar-title {
+  margin: 0.5em 0 1em;
+  color: var(--sec);
+}
+
+.sidebar hr {
+  margin: 0 0 1.5em;
+}
+
+/* Left tabs */
+.note {
+  color: var(--sec);
 }
 
 .tabs {
@@ -114,38 +136,75 @@ ul {
   display: flex;
   flex-direction: column;
   justify-content: space-evenly;
+  text-align: center;
 }
 
-.tabs h3 {
-  color: var(--alt);
+.tab {
   margin: 0;
-}
-
-a::before, .tabs h3::before {
-  content: "<";
-}
-
-a::after, .tabs h3::after {
-  content: ">";
-}
-
-a {
   color: var(--alt);
 }
 
-.side-right {
-  flex: 0 0 209px;
-  padding-left: 16px;
-  padding-right: 16px;
+.tab.current {
+  color: var(--pri);
 }
 
-.side-right p {
+/* Right idea board */
+.ideas {
   margin: 0 0 0.5em;
+  padding: 0;
+  list-style: none;
+  color: var(--sec);
 }
 
-.main { flex: 1; }
+/* Main */
 
-@media (width <= 1020px) {
+.main {
+  flex: 1;
+  border: var(--thicc) solid var(--sec);
+}
+
+.main-title {
+  text-decoration: underline;
+}
+
+.signature {
+  color: var(--sec);
+}
+
+.signature p {
+  margin: 0.5em 0;
+}
+
+/* Footer */
+
+.footer {
+  border: var(--thicc) solid var(--alt);
+}
+
+.footer-title {
+  text-align: center;
+  text-decoration: underline;
+  color: var(--sec);
+}
+
+.contact-grid {
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  text-align: center;
+}
+
+.fingerprint-label {
+  margin-bottom: 5px;
+}
+
+.fingerprint {
+  margin-top: 5px;
+}
+
+
+/* Phone layout adaptation */
+
+@media (max-width: 1020px) {
   .layout {
     max-width: 600px;
   }
@@ -154,12 +213,18 @@ a {
     flex-direction: column;
   }
 
-  .side-left, .side-right {
+  .sidebar {
     flex: none;
   }
 
   .box {
     padding-left: 20px;
     padding-right: 20px;
+  }
+}
+
+@media (max-width: 600px) {
+  .contact-grid {
+    grid-template-columns: 1fr;
   }
 }

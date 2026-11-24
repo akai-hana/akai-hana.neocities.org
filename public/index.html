@@ -6,9 +6,7 @@
 
     <title>akai_hana's little corner</title> <!-- TODO: do carousel title -->
 
-    <!-- STYLESHEET -->
     <link href="style.css" rel="stylesheet" type="text/css" media="all">
-    <!-- FAVICON -->
     <link rel="icon" href="favicon.svg" type="image/svg+xml">
   </head>
 
@@ -16,26 +14,26 @@
     <div class="layout">
 
       <!-- HEADER -->
-      <div class="header box">
-        <h3 style="color: var(--sec)">Welcome! You can call me</h3>
-        <h1>&gt; akai_hana&nbsp;&nbsp;</h1>
-      </div>
+      <header class="header box">
+        <p class="pixel-sm">Welcome! You can call me</p>
+        <h1>&gt; akai_hana&nbsp;&nbsp;</h1> <!-- the &nbsp;'s balance out the center from the "> " -->
+      </header>
 
       <div class="row">
 
         <!-- SIDEBAR (left) -->
-        <nav class="box side-left">
-          <h2 style="color: var(--sec)">Tabs</h2>
+        <nav class="box sidebar side-left">
+          <p class="pixel-lg sidebar-title">Tabs</p>
 
-          <hr style="color: var(--pri)">
+          <hr>
 
-          <p style="color: var(--sec)"><i>(not yet working)</i></p>
+          <p class="note"><i>(not yet working)</i></p>
 
-          <div class="tabs" style="text-align: center">
-            <h3 style="color: var(--pri)">Home</h3>
-            <h3>Dream logs</h3>
-            <h3>Diary</h3>
-            <h3>Blog</h3>
+          <div class="tabs">
+            <p class="pixel-sm tab current">Home</p>
+            <p class="pixel-sm tab">Dream logs</p>
+            <p class="pixel-sm tab">Diary</p>
+            <p class="pixel-sm tab">Blog</p>
 
             <!--
               TODO: once i do multiple tab pages;
@@ -47,8 +45,8 @@
         </nav>
 
         <!-- MAIN -->
-        <div class="box main">
-          <h3><u>Hello everyone!<br>Welcome to my Neocity!</u></h3>
+        <main class="box main">
+          <p class="pixel-sm main-title">Hello everyone!<br>Welcome to my Neocity!</p>
 
           <p>I want this site to be a place where I gather various writings, like a dream diary, blog, articles about various topics i'm interested in, and some other stuff.</p>
 
@@ -60,55 +58,55 @@
 
           <p>So, come again later!</p>
 
-          <div style="color: var(--sec); line-height: 0">
-            <br>
-
-            <h3><em>Love,</em></h3>
-            <h3><em>> akai_hana</em></h3>
+          <div class="signature">
+            <p class="pixel-sm"><em>Love,</em></p>
+            <p class="pixel-sm"><em>&gt; akai_hana</em></p>
           </div>
-        </div>
+        </main>
 
         <!-- SIDEBAR (right) -->
-        <div class="box side-right">
-          <h2 style="color: var(--sec)">Ideas</h2>
+        <aside class="box sidebar side-right">
+          <p class="pixel-lg sidebar-title">Ideas</p>
 
           <hr>
 
-          <div style="color: var(--sec); margin: 0 0 0.5em; }">
-            <h3>-Dream journal</h3>
-            <h3>-Diary</h3>
-            <h3>-Blog tab</h3>
-            <h3>-Sidebars (left tabs, right links)</h3>
-            <h3>-Some sortof commenting system?</h3>
-            <h3>-Linux tab</h3>
-            <h3>-Photo corner?</h3>
-          </div>
-        </div>
+          <ul class="ideas">
+            <li class="pixel-sm">-Dream journal</li>
+            <li class="pixel-sm">-Diary</li>
+            <li class="pixel-sm">-Blog tab</li>
+            <li class="pixel-sm">-Sidebars (left tabs, right links)</li>
+            <li class="pixel-sm">-Some sortof commenting system?</li>
+            <li class="pixel-sm">-Linux tab</li>
+            <li class="pixel-sm">-Photo corner?</li>
+          </ul>
+        </aside>
       </div>
 
       <!-- FOOTER -->
-      <div class="footer box">
-        <h2 style="text-align: center; color: var(--sec)"; text-align: left><u>Contact me!</u></h2>
+      <footer class="footer box">
+        <p class="pixel-lg footer-title">Contact me!</p>
 
-        <div style="display: grid; grid-template-columns: repeat(3, 1fr); text-align: center;">
+        <div class="contact-grid">
 
           <div>
-            <h3><a href="https://discord.com/users/457182030514356226">Discord</a></h3>
-            <h4>akai_hana</h4>
+            <p class="pixel-sm"><a href="https://discord.com/users/457182030514356226">Discord</a></p>
+            <p class="label">akai_hana</p>
           </div>
 
           <div>
-            <h3><a href="https://github.com/akai-hana">GitHub</a></h3>
-            <h4>github.com/akai-hana</h4>
+            <p class="pixel-sm"><a href="https://github.com/akai-hana">GitHub</a></p>
+            <p class="label">github.com/akai-hana</p>
           </div>
 
           <div>
-            <h3><a href="https://pastebin.com/FSE6sJq4">PGP public key</a></h3>
-            <h4>Fingerprint: DF2B30FB5C97CCB0D96CC1BD18B15131709BC9A4</h4>
+            <p class="pixel-sm"><a href="https://pastebin.com/FSE6sJq4">PGP public key</a></p>
+            <p class="label fingerprint-label">Fingerprint:</p>
+            <p class="pixel-sm fingerprint"><code>DF2B 30FB 5C97 CCB0 D96C<br>C1BD 18B1 5131 709B C9A4</code></p>
           </div>
 
         </div>
-      </div>
+      </footer>
+
     </div>
   </body>
 </html>
